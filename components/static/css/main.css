@@ -53,6 +53,10 @@ body {
   color: #52D5FD;
 }
 
+#search-section button:focus {
+  box-shadow: none;
+}
+
 .search-query:hover + .input-group-btn {
   z-index: 999;
 }
