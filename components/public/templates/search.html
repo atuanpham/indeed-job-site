@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}Job list{% endblock %}
+
+{% block content %}
+  <div class="row justify-content-center" id="search-section">
+    <div class="col-md-8 col-sm-12 input-group">
+      <input type="text" class="search-query form-control" value="{{ search_query }}" placeholder="Search..." />
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button">
+          <span class="ion-ios-search"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+  <div class="row justify-content-center" id="job-list">
+    <div class="col-md-8 col-sm-12">
+
+      {% for job in jobs %}
+        <div class="job">
+          <h5 class='job-title'><a href="/jobs/{{ job['jobkey'] }}">{{ job['jobtitle'] }}</a></h5>
+          <div>
+            <small class="company-name">{{ job['company'] }}</small><small> - </small><small class='location'>{{ job['formattedLocationFull'] }}</small>
+          </div>
+          <div>
+            <small class="time">{{ job['formattedRelativeTime'] }}</small>
+          </div>
+          <p class='job-description'>
+            {{ job['snippet'] }}
+          </p>
+        </div>
+      {% endfor %}
+
+      <nav aria-label="Page navigation job-pagination">
+        <ul class="pagination justify-content-center">
+          <li class="page-item {% if prev_page == -1 %}disabled{% endif %}">
+            <a class="page-link" href="/jobs?page={{ prev_page }}" tabindex="-1">Trang trước</a>
+          </li>
+          <li class="page-item {% if next_page == -1 %}disabled{% endif %}">
+            <a class="page-link" href="/jobs?page={{ next_page }}">Trang sau</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+{% endblock %}

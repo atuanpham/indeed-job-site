@@ -1,0 +1,70 @@
+body {
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+#body-wrap {
+  margin-top: 50px;
+}
+
+#body-wrap h6 {
+  color: #999;
+  padding: 0 1rem;
+  font-size: bolder;
+}
+
+#body-wrap #brand-name {
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  margin-bottom: 50px;
+}
+
+#nav-bar {
+  line-height: 2;
+  margin-right: 40px;
+}
+
+#nav-bar a.nav-link {
+  color: #333;
+  text-decoration: none;
+}
+
+#nav-bar a.nav-link.active {
+  color: #fff;
+}
+
+#nav-bar a.nav-link:hover {
+  color: #666;
+  transition-duration: 0.3s;
+}
+
+#nav-bar a.nav-link.active:hover {
+  color: #fff;
+}
+
+#nav-bar .nav-link.active {
+  background-color: #AB8860;
+}
+
+input#form-search:focus {
+  border-color: #AB8860;
+}
+
+button.create-btn, button.edit-btn {
+  border-color: #CCA273 !important;
+  color: #CCA273 !important;
+}
+
+button.create-btn:hover, button.edit-btn:hover {
+  border-color: #CCA273 !important;
+  background-color: #CCA273 !important;
+  color: #fff !important;
+}
+
+button.btn i {
+  margin-right: 5px;
+}

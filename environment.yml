@@ -1,0 +1,15 @@
+name: job-site
+dependencies:
+    - setuptools
+    - ipython
+    - flask
+    - pip
+    - pip:
+        - requests
+        - html2text
+        - lxml
+        - beautifulsoup4
+        - flask-markdown
+        - nose
+        - mock
+        - flask-wtf

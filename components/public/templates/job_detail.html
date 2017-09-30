@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}{{ job['jobtitle'] }}{% endblock %}
+
+{% block content %}
+  <div class="row justify-content-center" id="job-list">
+    <div class="col-md-8 col-sm-12 job-detail">
+
+      <h3 class='job-title'>{{ job['jobtitle'] }}</h3>
+      <div class="job-meta-data">
+        <small class="company-name">{{ job['company'] }}</small>
+        <small>&emsp;|&emsp;</small>
+        <small class='location'>{{ job['formattedLocationFull'] }}</small>
+        <small>&emsp;|&emsp;</small>
+        <small class="time">{{ job['formattedRelativeTime'] }}</small>
+      </div>
+      <hr>
+      <p class='job-description'>
+      {{ job['content']|markdown  }}
+      </p>
+
+      <div class='apply-job'>
+        <a role="button" class="btn btn-outline-info" href='{{ job['url'] }}' target='_blank'>Tìm hiểu thêm</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
