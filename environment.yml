@@ -1,5 +1,6 @@
 name: job-site
 dependencies:
+    - python=3
     - setuptools
     - ipython
     - flask
